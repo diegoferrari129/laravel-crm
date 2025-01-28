@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('aziendas', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('logo')->nullable();
+            $table->string('partita_iva', 11)->unique();
             $table->timestamps();
         });
     }
